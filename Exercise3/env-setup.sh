@@ -51,6 +51,10 @@ function setup-env(){
 	git clone "$remote_dir" "$local_dir"
 	cd $local_dir
 	
+	# Initialize git config to make sure that you can commit changes
+	git config --local user.name "developer"
+	git config --local user.email "developer@gmail.com"
+	
 	# Add a first commit.
 	local file_path="file1.txt"
 	touch $file_path

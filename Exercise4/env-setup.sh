@@ -57,6 +57,10 @@ function setup-env(){
 	git init $repo_directory
 	cd $repo_directory
 	
+	# Initialize git config to make sure that you can commit changes
+	git config --local user.name "developer"
+	git config --local user.email "developer@gmail.com"
+	
 	local file_name="file"
 	for j in {0..9}; do
 		fill-file-with-empty-lines "${file_name}_${j}.txt" "10"

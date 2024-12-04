@@ -96,7 +96,11 @@ function setup-env(){
 	# Change the current directory to the given repository path.
 	echo "Changing current directory to $repo_directory"
 	cd $repo_directory
-
+	
+	# Initialize git config to make sure that you can commit changes
+	git config --local user.name "developer"
+	git config --local user.email "developer@gmail.com"
+	
 	##############################################
 	# Create the initial state of the exercise ###
 	##############################################
